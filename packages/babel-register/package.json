@@ -17,7 +17,8 @@
     "lodash": "^4.17.13",
     "make-dir": "^2.1.0",
     "pirates": "^4.0.0",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.16",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0-0"
@@ -27,5 +28,10 @@
     "@babel/plugin-transform-modules-commonjs": "^7.8.3",
     "browserify": "16.5.0",
     "default-require-extensions": "^2.0.0"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
