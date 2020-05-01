@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "@babel/helper-regex": "^7.8.3",
-    "regexpu-core": "^4.6.0"
+    "regexpu-core": "^4.6.0",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"
@@ -27,5 +28,10 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/helper-plugin-test-runner": "^7.8.3"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
